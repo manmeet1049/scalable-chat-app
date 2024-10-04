@@ -1,3 +1,8 @@
+A scalable chat application made using node and nextjs with web-sockets integrated in a pub-sub manner using redis.
+
+
+
+
 # Turborepo starter
 
 This is an official starter Turborepo.
