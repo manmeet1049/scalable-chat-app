@@ -4,14 +4,11 @@ import { useSocket } from "../context/SocketProvider";
 import { useState } from "react";
 
 export default function Page() {
-  const { sendMessage } = useSocket();
+  const { sendMessage, messages } = useSocket();
   const [message, setMessage] = useState("");
-  ("");
+
   return (
     <>
-      <div>
-        <h1>messages</h1>
-      </div>
       <div>
         <input
           onChange={(e) => setMessage(e.target.value)}
@@ -25,6 +22,11 @@ export default function Page() {
         >
           send
         </button>
+      </div>
+      <div>
+        {messages.map((e) => (
+          <li>{e}</li>
+        ))}
       </div>
     </>
   );
